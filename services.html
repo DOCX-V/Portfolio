@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">LOGO</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="login-btn" onclick="openLoginModal()">Login</button></li>
+      </ul>
+    </nav>
+    <!-- Sidebar for Mobile View -->
+    <div class="menu-icon" onclick="toggleSidebar()"><i class="uis uis-bars"></i></div>
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="toggleSidebar()"><i class="bi bi-x-square-fill"></i></button>
+      <ul>
+        <li><a href="index.html" onclick="toggleSidebar()">Home</a></li>
+        <li><a href="products.html" onclick="toggleSidebar()">Products</a></li>
+        <li><a href="services.html" onclick="toggleSidebar()">Services</a></li>
+        <li><a href="contact.html" onclick="toggleSidebar()">Contact</a></li>
+        <li><button class="login-btn" onclick="openLoginModal()">Login</button></li>
+      </ul>
+    </div>
+  </header>
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()"><i class="bi bi-x-square-fill"></i></span>
+
+      <!-- Default Login Form -->
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+
+          <!-- Remember Me Checkbox -->
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+          </div>
+
+          <button type="submit" class="login-submit">Login</button>
+        </form>
+        <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+        <p>New here? <a href="#" onclick="showSignup()">Create an account</a></p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" class="hidden">
+        <h2>Sign Up</h2>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="newUsername">Username</label>
+          <input type="text" id="newUsername" name="newUsername" required>
+          <label for="newPassword">Password</label>
+          <input type="password" id="newPassword" name="newPassword" required>
+          <button type="submit" class="login-submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+      </div>
+
+      <!-- Forgot Password Form -->
+      <div id="forgotPasswordForm" class="hidden">
+        <h2>Forgot Password</h2>
+        <form>
+          <label for="forgotEmail">Email</label>
+          <input type="email" id="forgotEmail" name="forgotEmail" required>
+          <button type="submit" class="login-submit">Reset Password</button>
+        </form>
+        <p>Remember your password? <a href="#" onclick="showLogin()">Login here</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- All Contents Goes Here -->
+  <section class="tabbed-content">
+    <div class="tabbed">
+      <input type="radio" name="tabs" id="tab-nav-1" checked>
+      <label for="tab-nav-1">HTML</label>
+      <input type="radio" name="tabs" id="tab-nav-2">
+      <label for="tab-nav-2">CSS</label>
+      <input type="radio" name="tabs" id="tab-nav-3">
+      <label for="tab-nav-3">Javascript</label>
+      <input type="radio" name="tabs" id="tab-nav-4">
+      <label for="tab-nav-4">Output</label>
+      <div class="tabs">
+        <div>
+          <h2>HTML</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla tortor, a posuere urna.
+            Praesent
+            urna quam, semper ut ultricies et, mollis ac elit. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla tortor, a posuere urna.
+            Praesent
+            urna quam, semper ut ultricies et, mollis ac elit. Suspendisse tempor, lacus id consectetur sagittis, lorem
+            odio dignissim nulla, a condimentum sem neque sed ligula. Maecenas id risus eros, eget porttitor metus.
+            Quisque pellentesque neque dignissim nisl pellentesque vitae tempus urna eleifend. Nullam egestas, neque id
+            placerat luctus, nibh velit pharetra nulla, vel pretium justo massa ut elit. Vivamus nec auctor nunc.</p>
+        </div>
+        <div>
+          <h2>CSS</h2>
+          <p>Maecenas dictum, urna ut consequat condimentum, est dui commodo diam, ac pretium dui ante eu quam.
+            Curabitur
+            posuere metus nec tellus venenatis placerat. Ut egestas neque in odio vulputate gravida. In at justo ac est
+            laoreet eleifend vel quis arcu. Aliquam erat volutpat. Proin vitae vehicula neque. Nam tempus erat ac ante
+            tincidunt tincidunt. Pellentesque eu nibh sapien. Nunc augue magna, lacinia eget congue eget, mattis id
+            tortor. Fusce id vestibulum neque. Proin tincidunt tellus ut risus lobortis cursus. Duis sit amet urna vel
+            sapien ullamcorper varius.</p>
+        </div>
+        <div>
+          <h2>Javascript</h2>
+          <p>Duis luctus dolor ac erat luctus hendrerit. Aenean id congue magna. Proin sit amet elit vel lacus ornare
+            dignissim imperdiet nec odio. Maecenas condimentum egestas lorem et laoreet. Donec ut leo non purus rutrum
+            euismod vel faucibus nunc. Curabitur vel mauris nisi, vitae laoreet erat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+            cubilia
+            Curae; Maecenas ipsum odio, iaculis id vulputate vitae, vestibulum at nunc. Integer non nisl lorem. Quisque
+            lobortis congue semper. Nunc neque nisi, consequat id egestas vitae, porta vel sem.</p>
+        </div>
+        <div>
+          <h2>Output</h2>
+          <p>Fusce vel eros eu lectus ultricies fermentum vestibulum adipiscing odio. Suspendisse ultricies, metus nec
+            dapibus pharetra, quam arcu vulputate nisl, a pretium nisi velit id ante. Nunc auctor augue sit amet orci
+            vestibulum id placerat nulla pellentesque. Duis vel quam velit. Ut auctor ipsum quis lacus semper non
+            pretium
+            mi dignissim. Morbi ultrices augue eget nisi hendrerit placerat. Mauris rhoncus urna quis metus congue quis
+            condimentum risus interdum. Nam lobortis lectus et enim laoreet mattis. Integer faucibus ullamcorper erat,
+            at
+            rhoncus leo bibendum sed. Mauris libero urna, placerat non pretium ac, elementum et arcu. Aliquam non tellus
+            diam, vel scelerisque odio. Etiam a quam et enim vehicula feugiat posuere at dui. Phasellus at nisl quam.
+            Integer nisi mi, varius vitae placerat viverra, dapibus vitae massa. Nullam ut orci vitae nisi ornare
+            aliquam
+            in eget orci.</p>
+        </div>
+      </div>
+  </section>
+  <section class="reg">
+    <section>
+      <h1>slide 1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis vel voluptatibus fugit voluptates
+        suscipit nam quas corporis ullam esse possimus sed quo natus quibusdam voluptatem, illo incidunt aliquam
+        quisquam qui debitis eum dicta asperiores inventore. Ipsam quaerat error esse nobis amet, minus id corporis ut
+        omnis earum explicabo aut quasi, nulla, cupiditate consequuntur quod quis iste vitae dicta aliquam! Fuga
+        consequuntur dolor, doloremque a modi odit sint consectetur explicabo ratione iste laboriosam repellat nesciunt
+        labore minus soluta dolorem, vero accusantium vitae nemo quas eligendi autem. Nulla eveniet blanditiis molestias
+        sed tempora eum alias, eius, est porro rerum, reiciendis repudiandae.</p>
+    </section>
+    <section>
+      <h1>slide 2</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis vel voluptatibus fugit voluptates
+        suscipit nam quas corporis ullam esse possimus sed quo natus quibusdam voluptatem, illo incidunt aliquam
+        quisquam qui debitis eum dicta asperiores inventore. Ipsam quaerat error esse nobis amet, minus id corporis ut
+        omnis earum explicabo aut quasi, nulla, cupiditate consequuntur quod quis iste vitae dicta aliquam! Fuga
+        consequuntur dolor, doloremque a modi odit sint consectetur explicabo ratione iste laboriosam repellat nesciunt
+        labore minus soluta dolorem, vero accusantium vitae nemo quas eligendi autem. Nulla eveniet blanditiis molestias
+        sed tempora eum alias, eius, est porro rerum, reiciendis repudiandae.</p>
+    </section>
+    <section>
+      <h1>slide 3</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis vel voluptatibus fugit voluptates
+        suscipit nam quas corporis ullam esse possimus sed quo natus quibusdam voluptatem, illo incidunt aliquam
+        quisquam qui debitis eum dicta asperiores inventore. Ipsam quaerat error esse nobis amet, minus id corporis ut
+        omnis earum explicabo aut quasi, nulla, cupiditate consequuntur quod quis iste vitae dicta aliquam! Fuga
+        consequuntur dolor, doloremque a modi odit sint consectetur explicabo ratione iste laboriosam repellat nesciunt
+        labore minus soluta dolorem, vero accusantium vitae nemo quas eligendi autem. Nulla eveniet blanditiis molestias
+        sed tempora eum alias, eius, est porro rerum, reiciendis repudiandae.</p>
+    </section>
+    <section>
+      <h1>slide 4</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis vel voluptatibus fugit voluptates
+        suscipit nam quas corporis ullam esse possimus sed quo natus quibusdam voluptatem, illo incidunt aliquam
+        quisquam qui debitis eum dicta asperiores inventore. Ipsam quaerat error esse nobis amet, minus id corporis ut
+        omnis earum explicabo aut quasi, nulla, cupiditate consequuntur quod quis iste vitae dicta aliquam! Fuga
+        consequuntur dolor, doloremque a modi odit sint consectetur explicabo ratione iste laboriosam repellat nesciunt
+        labore minus soluta dolorem, vero accusantium vitae nemo quas eligendi autem. Nulla eveniet blanditiis molestias
+        sed tempora eum alias, eius, est porro rerum, reiciendis repudiandae.</p>
+    </section>
+    <section>
+      <h1>slide 5</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis vel voluptatibus fugit voluptates
+        suscipit nam quas corporis ullam esse possimus sed quo natus quibusdam voluptatem, illo incidunt aliquam
+        quisquam qui debitis eum dicta asperiores inventore. Ipsam quaerat error esse nobis amet, minus id corporis ut
+        omnis earum explicabo aut quasi, nulla, cupiditate consequuntur quod quis iste vitae dicta aliquam! Fuga
+        consequuntur dolor, doloremque a modi odit sint consectetur explicabo ratione iste laboriosam repellat nesciunt
+        labore minus soluta dolorem, vero accusantium vitae nemo quas eligendi autem. Nulla eveniet blanditiis molestias
+        sed tempora eum alias, eius, est porro rerum, reiciendis repudiandae.</p>
+    </section>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+
+</html>

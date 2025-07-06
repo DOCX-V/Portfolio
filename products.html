@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">LOGO</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="login-btn" onclick="openLoginModal()">Login</button></li>
+      </ul>
+    </nav>
+    <!-- Sidebar for Mobile View -->
+    <div class="menu-icon" onclick="toggleSidebar()"><i class="uis uis-bars"></i></div>
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="toggleSidebar()"><i class="bi bi-x-square-fill"></i></button>
+      <ul>
+        <li><a href="index.html" onclick="toggleSidebar()">Home</a></li>
+        <li><a href="products.html" onclick="toggleSidebar()">Products</a></li>
+        <li><a href="services.html" onclick="toggleSidebar()">Services</a></li>
+        <li><a href="contact.html" onclick="toggleSidebar()">Contact</a></li>
+        <li><button class="login-btn" onclick="openLoginModal()">Login</button></li>
+      </ul>
+    </div>
+  </header>
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()"><i class="bi bi-x-square-fill"></i></span>
+
+      <!-- Default Login Form -->
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+
+          <!-- Remember Me Checkbox -->
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+          </div>
+
+          <button type="submit" class="login-submit">Login</button>
+        </form>
+        <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+        <p>New here? <a href="#" onclick="showSignup()">Create an account</a></p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" class="hidden">
+        <h2>Sign Up</h2>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="newUsername">Username</label>
+          <input type="text" id="newUsername" name="newUsername" required>
+          <label for="newPassword">Password</label>
+          <input type="password" id="newPassword" name="newPassword" required>
+          <button type="submit" class="login-submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+      </div>
+
+      <!-- Forgot Password Form -->
+      <div id="forgotPasswordForm" class="hidden">
+        <h2>Forgot Password</h2>
+        <form>
+          <label for="forgotEmail">Email</label>
+          <input type="email" id="forgotEmail" name="forgotEmail" required>
+          <button type="submit" class="login-submit">Reset Password</button>
+        </form>
+        <p>Remember your password? <a href="#" onclick="showLogin()">Login here</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- All Contents Goes Here -->
+<section class="set">
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="images/Login.jpg" alt="Project Image 1">
+      <h2>Pop-up login Modal</h2>
+      <p>Project Description 1</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Project</a>
+        <a href="#" class="btn">GitHub Repo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="images/Navigation bar.jpg" alt="Project Image 2">
+      <h2>Navigation Bar</h2>
+      <p>Project Description 2</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Project</a>
+        <a href="#" class="btn">GitHub Repo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="images/Contact Card.jpg" alt="Project Image 3">
+      <h2>Contact card</h2>
+      <p>Project Description 3</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Project</a>
+        <a href="#" class="btn">GitHub Repo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="images/Accordion.jpg" alt="Project Image 4">
+      <h2>Accordion</h2>
+      <p>Project Description 4</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Project</a>
+        <a href="#" class="btn">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer>2024 © All copyright to DOCX</footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+
+</html>
